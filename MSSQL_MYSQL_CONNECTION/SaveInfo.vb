@@ -13,8 +13,8 @@ Public Class SaveInfo
 
             Dim insertQuery As String = "INSERT INTO registration (ID, FirstName, MiddleName, LastName) VALUES (@ID, @FirstName, @MiddleName, @LastName)"
             Using insertCommand As New MySqlCommand(insertQuery, connection)
-                ' Provide values for your data
-                insertCommand.Parameters.AddWithValue("@ID", idtxt.Text) ' Replace with your desired ID value
+
+                insertCommand.Parameters.AddWithValue("@ID", idtxt.Text)
                 insertCommand.Parameters.AddWithValue("@FirstName", fnametxt.Text)
                 insertCommand.Parameters.AddWithValue("@MiddleName", mnametxt.Text)
                 insertCommand.Parameters.AddWithValue("@LastName", lnametxt.Text)
